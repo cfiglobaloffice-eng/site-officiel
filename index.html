@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CFI — Conscience & Future Initiative | Site Officiel</title>
-    <!-- Google Fonts & FontAwesome pour les icônes -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;1,400&display=swap" rel="stylesheet">
@@ -66,7 +65,7 @@
         }
 
         .logo-nav-img {
-            height: 65px;
+            height: 55px;
             width: auto;
             object-fit: contain;
         }
@@ -78,14 +77,14 @@
 
         .logo-title {
             font-weight: 700;
-            font-size: 1.5rem;
+            font-size: 1.3rem;
             color: var(--primary-blue);
             letter-spacing: 1px;
             line-height: 1.1;
         }
 
         .logo-subtitle {
-            font-size: 0.7rem;
+            font-size: 0.65rem;
             color: #718096;
             font-weight: 600;
             text-transform: uppercase;
@@ -102,7 +101,7 @@
         nav ul {
             display: flex;
             list-style: none;
-            gap: 18px;
+            gap: 15px;
             align-items: center;
         }
 
@@ -110,7 +109,7 @@
             text-decoration: none;
             color: var(--primary-blue);
             font-weight: 600;
-            font-size: 0.8rem;
+            font-size: 0.75rem;
             transition: var(--transition-smooth);
             text-transform: uppercase;
             letter-spacing: 0.5px;
@@ -137,72 +136,19 @@
             color: var(--accent-gold);
         }
 
-        /* Sélecteur de Langue Premium */
-        .lang-selector-wrapper {
-            position: relative;
+        /* Intégration Google Translate */
+        .translate-wrapper {
             display: inline-block;
+            margin-left: 10px;
         }
-
-        .lang-select-btn {
-            background: var(--light-bg);
-            border: 1px solid rgba(13, 44, 84, 0.15);
-            padding: 8px 14px;
-            font-weight: 600;
-            font-size: 0.8rem;
-            cursor: pointer;
-            border-radius: 5px;
-            color: var(--primary-blue);
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            transition: var(--transition-smooth);
-        }
-
-        .lang-select-btn:hover {
-            background: var(--primary-blue);
-            color: white;
-            border-color: var(--primary-blue);
-        }
-
-        .lang-dropdown {
-            position: absolute;
-            right: 0;
-            top: 110%;
-            background: white;
-            border-radius: 6px;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
-            display: none;
-            flex-direction: column;
-            min-width: 130px;
-            overflow: hidden;
-            z-index: 100;
-        }
-
-        .lang-dropdown a {
-            padding: 10px 15px;
-            text-decoration: none;
-            color: var(--dark-text);
-            font-size: 0.85rem;
-            text-transform: none;
-            font-weight: 500;
-            transition: background 0.2s;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-
-        .lang-dropdown a:hover {
-            background: var(--light-bg);
-            color: var(--accent-gold);
-        }
-
-        .lang-selector-wrapper:hover .lang-dropdown {
-            display: flex;
-        }
+        
+        /* Cacher la bannière Google Translate du haut */
+        .goog-te-banner-frame.skiptranslate { display: none !important; }
+        body { top: 0px !important; }
 
         /* Structure Globale des Sections */
         section {
-            padding: 100px 20px;
+            padding: 80px 20px;
         }
 
         .container {
@@ -247,10 +193,10 @@
             background: linear-gradient(rgba(8, 28, 52, 0.92), rgba(13, 44, 84, 0.85)), url('drapeau-CFI.png') no-repeat center/cover;
             color: var(--pure-white);
             text-align: center;
-            padding: 160px 20px;
+            padding: 140px 20px;
             display: flex;
             align-items: center;
-            min-height: 75vh;
+            min-height: 70vh;
         }
 
         .hero h1 {
@@ -324,83 +270,29 @@
         .mv-card h3 { color: var(--primary-blue); margin-bottom: 10px; font-size: 1.3rem; display: flex; align-items: center; gap: 10px;}
         .mv-card h3 i { color: var(--accent-gold); }
 
-        /* Principes */
-        .principles-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 25px;
-            margin-top: 40px;
-        }
-        .principle-item {
-            background: var(--light-bg);
-            padding: 25px;
-            border-radius: 6px;
-            text-align: center;
-            font-weight: 600;
-            color: var(--primary-blue);
-            border: 1px solid rgba(0,0,0,0.03);
-            transition: var(--transition-smooth);
-        }
-        .principle-item:hover {
-            background: var(--primary-blue);
-            color: white;
-            transform: translateY(-5px);
-        }
-        .principle-item i {
-            display: block;
-            font-size: 2rem;
-            color: var(--accent-gold);
-            margin-bottom: 15px;
-        }
-
-        /* Message du Fondateur */
-        .founder-section {
-            background: linear-gradient(rgba(13, 44, 84, 0.95), rgba(8, 28, 52, 0.98)), url('drapeau-CFI.png') no-repeat center/cover;
-            color: white;
-        }
-        .founder-container {
-            max-width: 900px;
-            margin: 0 auto;
-            text-align: center;
-        }
-        .founder-quote {
-            font-family: var(--font-title);
-            font-size: 1.6rem;
-            font-style: italic;
-            line-height: 1.8;
-            margin-bottom: 30px;
-            color: #edf2f7;
-        }
-        .founder-meta {
-            font-weight: 700;
-            font-size: 1.2rem;
-            color: var(--accent-gold);
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-
         /* Section Manifeste */
-        #manifeste { background-color: var(--pure-white); }
+        #manifeste { background-color: var(--light-bg); }
         .manifeste-box {
-            background: var(--light-bg);
+            background: var(--pure-white);
             padding: 50px;
             border-radius: 12px;
             border-top: 4px solid var(--accent-gold);
             font-size: 1.15rem;
             line-height: 2;
-            color: var(--dark-text);
+            color: #2d3748;
             text-align: justify;
             box-shadow: var(--card-shadow);
         }
 
         /* Vision & Valeurs */
+        #vision { background-color: var(--pure-white); }
         .values-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
             gap: 30px;
         }
         .value-card {
-            background: var(--pure-white);
+            background: var(--light-bg);
             padding: 40px 30px;
             border-radius: 8px;
             box-shadow: var(--card-shadow);
@@ -414,45 +306,52 @@
         .value-card i { font-size: 2.5rem; color: var(--accent-gold); margin-bottom: 20px; display: block;}
         .value-card h3 { color: var(--primary-blue); margin-bottom: 15px; font-size: 1.4rem; }
 
-        /* Section 10 Contributions */
-        #contributions { background-color: var(--pure-white); }
-        .contributions-grid {
+        /* Section 10 Contributions (Galerie Photo Grid) */
+        #contributions { background-color: var(--light-bg); }
+        .gallery-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 25px;
+            max-width: 1400px;
+            margin: 0 auto;
         }
-        .contribution-card {
-            background: var(--light-bg);
-            padding: 30px 25px;
-            border-radius: 8px;
-            border: 1px solid #eef0f2;
+        .gallery-item {
+            position: relative;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: var(--card-shadow);
+            height: 300px;
+            background: #cbd5e0;
+        }
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.6s ease;
+        }
+        .gallery-overlay {
+            position: absolute;
+            bottom: 0; left: 0; right: 0;
+            background: linear-gradient(transparent, rgba(13, 44, 84, 0.98));
+            color: white;
+            padding: 25px 20px;
             transition: var(--transition-smooth);
         }
-        .contribution-card:hover {
-            background: var(--primary-blue);
-            color: var(--pure-white);
-            transform: scale(1.03);
+        .gallery-item:hover img {
+            transform: scale(1.1);
         }
-        .contribution-num {
-            font-size: 2.2rem;
-            font-weight: 700;
-            color: var(--accent-gold);
-            margin-bottom: 15px;
-            display: block;
-            font-family: var(--font-title);
-        }
-        .contribution-card h3 { font-size: 1.15rem; margin-bottom: 12px; color: var(--primary-blue);}
-        .contribution-card:hover h3 { color: white; }
-        .contribution-card p { font-size: 0.9rem; opacity: 0.9; line-height: 1.6;}
+        .gallery-overlay h4 { font-size: 1.1rem; font-weight: 700; color: var(--accent-gold); margin-bottom: 5px; text-transform: uppercase;}
+        .gallery-overlay p { font-size: 0.85rem; color: #e2e8f0; line-height: 1.4; }
 
         /* Gouvernance */
+        #gouvernance { background-color: var(--pure-white); }
         .gov-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
             gap: 30px;
         }
         .gov-card {
-            background: white;
+            background: var(--light-bg);
             padding: 30px;
             border-radius: 8px;
             box-shadow: var(--card-shadow);
@@ -470,162 +369,59 @@
         .gov-info h3 { color: var(--primary-blue); margin-bottom: 8px; font-size: 1.2rem;}
         .gov-info p { color: #4a5568; font-size: 0.95rem; }
 
-        /* Publications */
-        #publications { background-color: var(--pure-white); }
-        .pub-grid {
+        /* Contact Section Améliorée (Anti-écrasement) */
+        #contact { background-color: var(--pure-white); }
+        .contact-layout {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 30px;
+            grid-template-columns: 1fr 1.5fr;
+            gap: 40px;
+            align-items: start;
         }
-        .pub-card {
+        .visuals-sidebar {
             background: var(--light-bg);
-            border-radius: 8px;
-            padding: 35px 25px;
-            text-align: center;
-            box-shadow: var(--card-shadow);
-            border-bottom: 3px solid transparent;
-            transition: var(--transition-smooth);
-        }
-        .pub-card:hover {
-            border-bottom-color: var(--accent-gold);
-            transform: translateY(-5px);
-        }
-        .pub-card i { font-size: 3rem; color: var(--primary-blue); margin-bottom: 20px;}
-        .pub-card h3 { color: var(--primary-blue); margin-bottom: 15px; font-size: 1.2rem; min-height: 50px;}
-        .pub-btn {
-            display: inline-flex;
-            align-items: center;
-            gap: 10px;
-            padding: 10px 20px;
-            background: var(--primary-blue);
-            color: white;
-            text-decoration: none;
-            border-radius: 4px;
-            font-size: 0.85rem;
-            font-weight: 600;
-            transition: 0.3s;
-            margin-top: 10px;
-        }
-        .pub-btn:hover { background: var(--accent-gold); }
-
-        /* Partenaires */
-        .partenaires-layout {
-            display: grid;
-            grid-template-columns: 1.4fr 0.6fr;
-            gap: 50px;
-            align-items: center;
-        }
-        .partenaires-list {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            gap: 20px;
-        }
-        .partenaire-item {
-            background: white;
-            padding: 20px;
-            border-radius: 6px;
-            text-align: center;
-            font-weight: 600;
-            box-shadow: var(--card-shadow);
-            color: var(--primary-blue);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 12px;
-        }
-        .partenaire-item i { color: var(--accent-gold); }
-        .partenaire-obj {
-            background: var(--primary-blue);
-            color: white;
             padding: 40px 30px;
             border-radius: 12px;
+            box-shadow: var(--card-shadow);
             text-align: center;
+            border-top: 5px solid var(--primary-blue);
         }
-        .partenaire-obj h3 { color: var(--accent-gold); margin-bottom: 15px;}
-
-        /* Présence Internationale */
-        #presence { background-color: var(--pure-white); }
-        .map-container {
-            margin-top: 40px;
-            background: #e2e8f0;
-            border-radius: 12px;
-            overflow: hidden;
-            box-shadow: var(--card-shadow);
-            position: relative;
+        
+        /* Style for real size main logo in sidebar */
+        .sidebar-logo {
+            max-width: 180px;
+            height: auto;
+            margin-bottom: 20px;
         }
-        .regions-tags {
-            display: flex;
-            justify-content: center;
-            gap: 15px;
-            flex-wrap: wrap;
-            margin-top: 30px;
-        }
-        .region-tag {
-            background: var(--primary-blue);
-            color: white;
-            padding: 10px 25px;
-            border-radius: 50px;
+        
+        .motto-text {
+            font-size: 0.85rem;
+            color: #4a5568;
             font-weight: 600;
-            font-size: 0.9rem;
+            text-transform: uppercase;
             letter-spacing: 0.5px;
+            border-top: 1px dashed #ddd;
+            border-bottom: 1px dashed #ddd;
+            padding: 12px 0;
+            margin: 25px 0;
         }
-
-        /* Galerie Premium */
-        .gallery-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 20px;
-            max-width: 1400px;
-            margin: 0 auto;
-        }
-        .gallery-item {
-            position: relative;
+        .info-card {
+            background-color: var(--pure-white);
+            padding: 25px;
             border-radius: 8px;
-            overflow: hidden;
-            box-shadow: var(--card-shadow);
-            height: 260px;
-            background: #cbd5e0;
+            text-align: left;
+            border-left: 4px solid var(--accent-gold);
         }
-        .gallery-item img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: transform 0.6s ease;
-        }
-        .gallery-overlay {
-            position: absolute;
-            bottom: 0; left: 0; right: 0;
-            background: linear-gradient(transparent, rgba(13, 44, 84, 0.95));
-            color: white;
-            padding: 20px;
-            opacity: 0;
-            transition: var(--transition-smooth);
-            transform: translateY(10px);
-        }
-        .gallery-item:hover img {
-            transform: scale(1.12);
-        }
-        .gallery-item:hover .gallery-overlay {
-            opacity: 1;
-            transform: translateY(0);
-        }
-        .gallery-overlay h4 { font-size: 1.1rem; font-weight: 600; color: var(--accent-gold); }
+        .info-card h4 { color: var(--primary-blue); font-size: 1.1rem; margin-bottom: 8px; }
+        .info-card p { font-size: 0.9rem; color: #4a5568; margin-bottom: 15px; }
+        .info-card .email-link { font-size: 1.1rem; color: var(--primary-blue); font-weight: 700; text-decoration: none; word-break: break-all; }
 
-        /* Adhésion & Formulaire */
-        #adhesion { background-color: var(--pure-white); }
+        /* Formulaire Premium */
         .form-premium-box {
-            max-width: 750px;
-            margin: 0 auto;
             background: var(--light-bg);
-            padding: 50px;
+            padding: 40px;
             border-radius: 12px;
             box-shadow: var(--card-shadow);
             border-top: 5px solid var(--accent-gold);
-        }
-        .form-row {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 20px;
         }
         .form-group { margin-bottom: 22px; }
         .form-group label {
@@ -650,6 +446,21 @@
             border-color: var(--accent-gold);
             box-shadow: 0 0 0 3px rgba(198, 161, 82, 0.15);
         }
+        
+        .submit-btn {
+            background-color: var(--primary-blue);
+            color: white;
+            border: none;
+            padding: 15px 35px;
+            font-weight: 700;
+            text-transform: uppercase;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: 0.3s;
+            width: 100%;
+            letter-spacing: 1px;
+        }
+        .submit-btn:hover { background-color: var(--accent-gold); }
 
         /* Statistiques */
         .stats-section {
@@ -676,134 +487,21 @@
         }
         .stat-label { font-size: 0.95rem; text-transform: uppercase; letter-spacing: 1px; color: #e2e8f0; }
 
-        /* Section Soutien (Don) */
-        .soutien-section {
-            background: #fff;
-            text-align: center;
-            border-top: 1px solid #e2e8f0;
-        }
-        .soutien-box { max-width: 800px; margin: 0 auto; }
-        .soutien-btn {
-            display: inline-block;
-            background-color: var(--accent-gold);
-            color: white;
-            text-decoration: none;
-            font-weight: 700;
-            padding: 16px 45px;
-            border-radius: 5px;
-            font-size: 1rem;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            margin-top: 25px;
-            box-shadow: 0 5px 15px rgba(198, 161, 82, 0.3);
-            transition: var(--transition-smooth);
-        }
-        .soutien-btn:hover {
-            background-color: var(--primary-blue);
-            transform: translateY(-2px);
-        }
-
-        /* Newsletter */
-        .newsletter-section {
-            background: var(--dark-blue);
-            color: white;
-            padding: 60px 20px;
-            text-align: center;
-        }
-        .newsletter-box { max-width: 600px; margin: 0 auto; }
-        .newsletter-box h3 { font-family: var(--font-title); font-size: 1.8rem; margin-bottom: 10px; color: var(--accent-gold); }
-        .newsletter-box p { font-size: 0.95rem; color: #cbd5e0; margin-bottom: 25px; }
-        .newsletter-form { display: flex; gap: 10px; }
-        .newsletter-form input {
-            flex: 1; padding: 15px; border-radius: 4px; border: none; font-size: 1rem;
-        }
-        .newsletter-btn {
-            background: var(--accent-gold); color: var(--primary-blue); border: none; padding: 0 30px;
-            font-weight: 700; text-transform: uppercase; border-radius: 4px; cursor: pointer; transition: 0.3s;
-        }
-        .newsletter-btn:hover { background: white; }
-
-        /* Contact & Sidebar */
-        .contact-layout {
-            display: grid;
-            grid-template-columns: 1.1fr 1.9fr;
-            gap: 40px;
-            align-items: start;
-        }
-        .visuals-sidebar {
-            background: var(--pure-white);
-            padding: 40px 30px;
-            border-radius: 12px;
-            box-shadow: var(--card-shadow);
-            text-align: center;
-            border-top: 5px solid var(--primary-blue);
-        }
-        .motto-text {
-            font-size: 0.85rem;
-            color: #4a5568;
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-            border-top: 1px dashed #ddd;
-            border-bottom: 1px dashed #ddd;
-            padding: 12px 0;
-            margin: 25px 0;
-        }
-        .info-card {
-            background-color: var(--light-bg);
-            padding: 25px;
-            border-radius: 8px;
-            text-align: left;
-            border-left: 4px solid var(--accent-gold);
-        }
-        .info-card h4 { color: var(--primary-blue); font-size: 1.1rem; margin-bottom: 8px; }
-        .info-card p { font-size: 0.9rem; color: #4a5568; margin-bottom: 15px; }
-        .info-card .email-link { font-size: 1.1rem; color: var(--primary-blue); font-weight: 700; text-decoration: none; word-break: break-all; }
-
-        /* Pied de page Premium */
+        /* Pied de page */
         footer {
             background-color: #051224;
             color: #cbd5e0;
-            padding: 70px 20px 30px 20px;
+            padding: 60px 20px 30px 20px;
             font-size: 0.9rem;
             border-top: 2px solid var(--accent-gold);
+            text-align: center;
         }
-        .footer-grid {
-            display: grid;
-            grid-template-columns: 1.2fr 0.8fr 1fr;
-            gap: 50px;
-            max-width: 1300px;
-            margin: 0 auto 50px auto;
-            text-align: left;
-        }
-        .footer-brand h3 { color: white; margin-bottom: 15px; letter-spacing: 1px;}
-        .footer-brand p { font-style: italic; font-size: 0.85rem; margin-bottom: 20px;}
-        .footer-links h4, .footer-docs h4 { color: var(--accent-gold); margin-bottom: 20px; text-transform: uppercase; font-size: 0.85rem; letter-spacing: 1px;}
-        .footer-links ul { list-style: none; display: grid; grid-template-columns: 1fr 1fr; gap: 10px;}
-        .footer-links a, .footer-docs a { text-decoration: none; color: #a0aec0; transition: 0.2s;}
-        .footer-links a:hover, .footer-docs a:hover { color: white; padding-left: 5px;}
-        .footer-docs ul { list-style: none; display: flex; flex-direction: column; gap: 12px;}
-        
-        .social-icons { display: flex; gap: 15px; margin-top: 15px; }
-        .social-icons a {
-            background: rgba(255,255,255,0.05); color: white; width: 40px; height: 40px; 
-            display: flex; align-items: center; justify-content: center; border-radius: 50px; 
-            transition: var(--transition-smooth); font-size: 1.1rem;
-        }
-        .social-icons a:hover { background: var(--accent-gold); transform: translateY(-3px); }
-        .footer-bottom { border-top: 1px solid rgba(255,255,255,0.05); padding-top: 30px; text-align: center; font-size: 0.8rem; color: #718096;}
-
-        /* Alert adhésion */
-        .alert-success {
-            display: none; background: #c6f6d5; color: #22543d; padding: 15px; border-radius: 6px; 
-            margin-bottom: 20px; font-weight: 600; font-size: 0.95rem; border: 1px solid #9ae6b4;
-        }
+        .footer-bottom { padding-top: 20px; font-size: 0.8rem; color: #718096;}
 
         /* Responsive Mobile */
         @media (max-width: 1024px) {
             nav ul { display: none; }
-            .about-grid, .contact-layout, .partenaires-layout { grid-template-columns: 1fr; }
-            .footer-grid { grid-template-columns: 1fr; gap: 30px; }
+            .about-grid, .contact-layout { grid-template-columns: 1fr; }
             .hero h1 { font-size: 2.5rem; }
             body { padding-top: 90px; }
         }
@@ -811,7 +509,6 @@
 </head>
 <body>
 
-    <!-- BARRE DE NAVIGATION ET SECTEUR MULTILINGUE -->
     <header>
         <div class="nav-container">
             <a href="#" class="logo-area">
@@ -829,27 +526,16 @@
                     <li><a href="#vision">Vision & Valeurs</a></li>
                     <li><a href="#contributions">10 Contributions</a></li>
                     <li><a href="#gouvernance">Gouvernance</a></li>
-                    <li><a href="#publications">Publications</a></li>
-                    <li><a href="#partenaires">Partenaires</a></li>
-                    <li><a href="#adhesion">Adhésion</a></li>
                     <li><a href="#contact">Contact</a></li>
                 </ul>
                 
-                <!-- Sélecteur Multilingue -->
-                <div class="lang-selector-wrapper">
-                    <button class="lang-select-btn"><i class="fa-solid fa-globe"></i> Français <i class="fa-solid fa-chevron-down" style="font-size:0.7rem"></i></button>
-                    <div class="lang-dropdown">
-                        <a href="#" onclick="alert('Traduction automatique vers l\'Anglais en cours d\'activation...')">English</a>
-                        <a href="#" onclick="alert('Traduction automatique vers l\'Espagnol en cours d\'activation...')">Español</a>
-                        <a href="#" onclick="alert('Traduction automatique vers le Portugais en cours d\'activation...')">Português</a>
-                        <a href="#" onclick="alert('Traduction automatique vers l\'Arabe en cours d\'activation...')">العربية</a>
-                    </div>
+                <div class="translate-wrapper">
+                    <div id="google_translate_element"></div>
                 </div>
             </nav>
         </div>
     </header>
 
-    <!-- ZONE ACCUEIL / HERO SECTION -->
     <section class="hero" id="accueil">
         <div class="container">
             <p class="hero-motto">Éveiller les consciences • Unir les peuples • Construire l'avenir</p>
@@ -859,7 +545,6 @@
         </div>
     </section>
 
-    <!-- COMPTEURS STATISTIQUES ANIMÉS -->
     <section class="stats-section">
         <div class="stats-grid">
             <div class="stat-item">
@@ -881,7 +566,6 @@
         </div>
     </section>
 
-    <!-- PAGE À PROPOS -->
     <section id="apropos">
         <div class="container">
             <div class="section-header">
@@ -894,7 +578,6 @@
                     <p><strong>Conscience & Future Initiative (CFI)</strong> est une organisation internationale de réflexion, d'action et d'éducation citoyenne.</p>
                     <p>La CFI est née de la conviction profonde que les grands défis du monde contemporain ne pourront être résolus de manière pérenne sans une transformation profonde des consciences, une coopération renforcée entre les peuples et une vision stratégique commune de l'avenir de notre humanité.</p>
                     <p>Nous œuvrons quotidiennement pour la promotion de la dignité humaine, de l'éducation universelle, de la paix globale, de la responsabilité citoyenne individuelle et collective, du dialogue interculturel et du développement durable.</p>
-                    <p>Notre mission supérieure consiste à éveiller les consciences, renforcer activement les liens fraternels entre les peuples et préparer rigoureusement les générations futures à bâtir un monde plus juste, plus éclairé et solidaire.</p>
                 </div>
                 <div class="about-mission-vision">
                     <div class="mv-card">
@@ -903,507 +586,236 @@
                     </div>
                     <div class="mv-card">
                         <h3><i class="fa-solid fa-bullseye"></i> Notre Mission</h3>
-                        <p>Promouvoir l'éducation de qualité, la coopération internationale équitable, la dignité humaine et l'éveil général des consciences.</p>
+                        <p>Éveiller les esprits à travers le monde, structurer de solides ponts interculturels et guider la jeunesse vers un avenir durable.</p>
                     </div>
                 </div>
             </div>
-
-            <h3 style="color: var(--primary-blue); text-align: center; font-size: 1.8rem; margin: 60px 0 30px 0;">Nos Principes Directeurs</h3>
-            <div class="principles-grid">
-                <div class="principle-item"><i class="fa-solid fa-heart"></i>Respect de la dignité humaine</div>
-                <div class="principle-item"><i class="fa-solid fa-book-open"></i>Éducation pour tous</div>
-                <div class="principle-item"><i class="fa-solid fa-comments"></i>Dialogue entre les peuples</div>
-                <div class="principle-item"><i class="fa-solid fa-gavel"></i>Responsabilité citoyenne</div>
-                <div class="principle-item"><i class="fa-solid fa-shield-halved"></i>Intégrité absolue</div>
-                <div class="principle-item"><i class="fa-solid fa-handshake-angle"></i>Solidarité internationale</div>
-                <div class="principle-item"><i class="fa-solid fa-lightbulb"></i>Innovation pour le bien commun</div>
-            </div>
         </div>
     </section>
 
-    <!-- MESSAGE DU FONDATEUR -->
-    <section class="founder-section">
-        <div class="founder-container">
-            <div style="font-size: 2.5rem; color: var(--accent-gold); margin-bottom: 20px;"><i class="fa-solid fa-quote-left"></i></div>
-            <div class="founder-quote">
-                « La transformation du monde commence toujours par la transformation des consciences. La CFI ne cherche pas à diviser. Elle cherche à rassembler. Elle ne cherche pas à imposer. Elle cherche à inspirer. Nous croyons fermement qu'un avenir meilleur se construit par l'éducation, la responsabilité individuelle, la coopération et le respect inaltérable de la dignité humaine. Chaque citoyen peut devenir un acteur du changement positif. La CFI est une invitation mondiale à construire ensemble un avenir plus éclairé. »
-            </div>
-            <div class="founder-meta">Message du Président Fondateur</div>
-        </div>
-    </section>
-
-    <!-- SECTION NOTRE MANIFESTE -->
     <section id="manifeste">
         <div class="container">
             <div class="section-header">
-                <h2>Manifeste Institutionnel</h2>
-                <p>Une charte philosophique transformée en un véritable plan d'action global.</p>
+                <h2>Notre Manifeste</h2>
+                <p>Le socle philosophique et éthique qui guide chacune de nos actions publiques.</p>
             </div>
             <div class="manifeste-box">
-                La CFI ne cherche pas à diviser. Elle cherche à rassembler. Elle ne cherche pas à imposer. Elle cherche à inspirer. Elle ne cherche pas à détruire. Elle cherche à construire. Elle ne cherche pas à opposer les peuples. Elle cherche à jeter des ponts entre eux. NOTRE APPEL AU MONDE : Quelle que soit votre nation. Quelle que soit votre religion. Quelle que soit votre culture. Quelle que soit votre profession. Si vous croyez en la dignité humaine, en l'éducation, en la paix, en l'intégrité et en l'avenir des générations futures, alors vous pouvez contribuer à bâtir un monde meilleur avec nous. C'est extraordinaire. Ce texte sur les 10 Contributions Historiques et l'Appel au Monde fait passer la CFI d'une charte philosophique à un véritable plan d'action mondial.
+                <p>Nous affirmons solennellement que l'avenir humain dépend de notre capacité collective à éveiller les consciences de nos citoyens. Notre manifeste est un appel d'urgence au rassemblement des cœurs et des intelligences au-delà des frontières géographiques, dogmatiques ou culturelles. Il est temps d'abandonner les anciennes logiques de confrontation stérile pour bâtir de solides fondations interconnectées, centrées sur la transmission saine du savoir, le respect inconditionnel de la dignité de chacun et l'innovation positive.</p>
             </div>
         </div>
     </section>
 
-    <!-- SECTION VISION & VALEURS -->
-    <section id="vision" style="background-color: var(--light-bg);">
+    <section id="vision">
         <div class="container">
             <div class="section-header">
-                <h2>Vision & Valeurs Fondamentales</h2>
-                <p>Les piliers éthiques immuables qui encadrent l'ensemble de notre déploiement mondial.</p>
+                <h2>Nos Valeurs Fondamentales</h2>
+                <p>Les trois piliers inébranlables gravés au cœur de l'identité institutionnelle de la CFI.</p>
             </div>
             <div class="values-grid">
                 <div class="value-card">
-                    <i class="fa-solid fa-brain"></i>
-                    <h3>Éveil des Consciences</h3>
-                    <p>Favoriser la réflexion critique, le dialogue constructif, le discernement profond et l'action réfléchie de chaque citoyen au service direct du bien commun.</p>
+                    <i class="fa-solid fa-lightbulb"></i>
+                    <h3>Conscience</h3>
+                    <p>Le point de départ indispensable à tout changement réel. Se comprendre soi-même pour mieux appréhender notre impact environnemental et social global.</p>
                 </div>
                 <div class="value-card">
-                    <i class="fa-solid fa-earth-africa"></i>
-                    <h3>Unité des Peuples</h3>
-                    <p>Transcender les clivages culturels, nationaux et religieux traditionnels pour bâtir une fraternité universelle solide basée sur la réciprocité.</p>
+                    <i class="fa-solid fa-handshake"></i>
+                    <h3>Unité</h3>
+                    <p>Aucune nation ne peut prospérer isolée face aux enjeux modernes. Nous croyons fermement en l'esprit de fraternité, de respect partagé et de dialogue transversal.</p>
                 </div>
                 <div class="value-card">
-                    <i class="fa-solid fa-scale-balanced"></i>
-                    <h3>Dignité Humaine</h3>
-                    <p>Garantir et promouvoir le respect inaliénable de chaque individu, indépendamment de son origine sociale, de sa culture ou de sa profession.</p>
+                    <i class="fa-solid fa-seedling"></i>
+                    <h3>Avenir</h3>
+                    <p>Anticiper les besoins technologiques, écologiques et éducatifs afin d'offrir des structures durables aux générations montantes.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- SECTION 10 CONTRIBUTIONS -->
     <section id="contributions">
         <div class="container">
             <div class="section-header">
-                <h2>Les 10 Contributions Historiques de la CFI</h2>
-                <p>Notre feuille de route doctrinale et stratégique pour les générations futures.</p>
+                <h2>Les 12 Axes Stratégiques de la CFI</h2>
+                <p>Découvrez notre plan d'action mondial mis en œuvre à travers ces douze pôles iconographiques.</p>
             </div>
-            <div class="contributions-grid">
-                <div class="contribution-card">
-                    <span class="contribution-num">01</span>
-                    <h3>Éveil des Consciences</h3>
-                    <p>Aider les citoyens à réfléchir, analyser et dialoguer avec clarté.</p>
+            
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="photo1.png" alt="Éveil des consciences">
+                    <div class="gallery-overlay">
+                        <h4>01. Éveil des consciences</h4>
+                        <p>Transformer la vision globale pour un engagement citoyen plus profond et éclairé.</p>
+                    </div>
                 </div>
-                <div class="contribution-card">
-                    <span class="contribution-num">02</span>
-                    <h3>Éducation Globale</h3>
-                    <p>Création de livres, guides, affiches éducatives et formations gratuites.</p>
+                <div class="gallery-item">
+                    <img src="photo2.png" alt="L'unité des peuples">
+                    <div class="gallery-overlay">
+                        <h4>02. L'unité des peuples</h4>
+                        <p>Fédérer les communautés internationales autour d'objectifs humains solidaires.</p>
+                    </div>
                 </div>
-                <div class="contribution-card">
-                    <span class="contribution-num">03</span>
-                    <h3>Culture & Dialogue</h3>
-                    <p>Encourager la médiation, le respect mutuel et la cohésion sociale mondiale.</p>
+                <div class="gallery-item">
+                    <img src="photo3.png" alt="L'éducation comme fondement">
+                    <div class="gallery-overlay">
+                        <h4>03. L'éducation comme fondement</h4>
+                        <p>Garantir l'accès universel à des savoirs émancipateurs et durables.</p>
+                    </div>
                 </div>
-                <div class="contribution-card">
-                    <span class="contribution-num">04</span>
-                    <h3>Dignité Humaine</h3>
-                    <p>Promouvoir le respect inconditionnel de chaque personne humaine.</p>
+                <div class="gallery-item">
+                    <img src="photo4.png" alt="Le dialogue des cultures">
+                    <div class="gallery-overlay">
+                        <h4>04. Le dialogue des cultures</h4>
+                        <p>Valoriser les riches diversités mondiales comme leviers de paix.</p>
+                    </div>
                 </div>
-                <div class="contribution-card">
-                    <span class="contribution-num">05</span>
-                    <h3>Dignité du Travail</h3>
-                    <p>Valoriser chaque métier honnête comme une pierre à l'édifice de notre monde.</p>
+                <div class="gallery-item">
+                    <img src="photo5.png" alt="La dignité humaine">
+                    <div class="gallery-overlay">
+                        <h4>05. La dignité humaine</h4>
+                        <p>Placer les droits fondamentaux et l'équité au centre de tout système politique.</p>
+                    </div>
                 </div>
-                <div class="contribution-card">
-                    <span class="contribution-num">06</span>
-                    <h3>Protection de la Jeunesse</h3>
-                    <p>Offrir aux jeunes des repères solides, des compétences et des opportunités réelles.</p>
+                <div class="gallery-item">
+                    <img src="photo6.png" alt="La coopération mondiale">
+                    <div class="gallery-overlay">
+                        <h4>06. La coopération mondiale</h4>
+                        <p>Co-construire des partenariats stratégiques pour des solutions partagées.</p>
+                    </div>
                 </div>
-                <div class="contribution-card">
-                    <span class="contribution-num">07</span>
-                    <h3>Coopération Équitable</h3>
-                    <p>Favoriser les partenariats gagnant-gagnant et le partage des connaissances.</p>
+                <div class="gallery-item">
+                    <img src="photo7.png" alt="Les générations futures">
+                    <div class="gallery-overlay">
+                        <h4>07. Les générations futures</h4>
+                        <p>Accompagner, former et inspirer la relève dirigeante de demain.</p>
+                    </div>
                 </div>
-                <div class="contribution-card">
-                    <span class="contribution-num">08</span>
-                    <h3>Préservation Culturelle</h3>
-                    <p>Sauvegarder les langues, traditions, patrimoines et savoir-faire ancestraux.</p>
+                <div class="gallery-item">
+                    <img src="photo8.png" alt="Innovation et avenir">
+                    <div class="gallery-overlay">
+                        <h4>08. Innovation et avenir</h4>
+                        <p>Allier avancées scientifiques, éthique et bien-être des populations.</p>
+                    </div>
                 </div>
-                <div class="contribution-card">
-                    <span class="contribution-num">09</span>
-                    <h3>Innovation Durable</h3>
-                    <p>Soutenir les solutions technologiques au service de l'éducation et de la santé.</p>
+                <div class="gallery-item">
+                    <img src="photo9.png" alt="Citoyenneté responsable">
+                    <div class="gallery-overlay">
+                        <h4>09. Citoyenneté responsable</h4>
+                        <p>Inculquer le devoir civique, le respect environnemental et le bénévolat.</p>
+                    </div>
                 </div>
-                <div class="contribution-card">
-                    <span class="contribution-num">10</span>
-                    <h3>Générations Futures</h3>
-                    <p>Garantir que chaque projet actuel laisse un héritage sain et viable pour demain.</p>
+                <div class="gallery-item">
+                    <img src="photo10.png" alt="Vision mondiale">
+                    <div class="gallery-overlay">
+                        <h4>10. Vision mondiale</h4>
+                        <p>Cartographier et interconnecter les réseaux d'influence éthiques globaux.</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="photo11.png" alt="Construction de l'avenir">
+                    <div class="gallery-overlay">
+                        <h4>11. Construction de l'avenir</h4>
+                        <p>Développer les éco-cités de demain basées sur les énergies propres.</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="photo12.png" alt="La grande promesse">
+                    <div class="gallery-overlay">
+                        <h4>12. La grande promesse de la CFI</h4>
+                        <p>Garder le cap vers une aube lumineuse, unie, juste et harmonieuse.</p>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- PAGE GOUVERNANCE -->
-    <section id="gouvernance" style="background-color: var(--light-bg);">
+    <section id="gouvernance">
         <div class="container">
             <div class="section-header">
-                <h2>Organisation Institutionnelle</h2>
-                <p>La structure stratégique globale encadrant l'administration de nos comités internationaux.</p>
+                <h2>Gouvernance Institutionnelle</h2>
+                <p>Une organisation transparente, rigoureuse et structurée collégialement.</p>
             </div>
             <div class="gov-grid">
                 <div class="gov-card">
-                    <div class="gov-icon"><i class="fa-solid fa-crown"></i></div>
+                    <div class="gov-icon"><i class="fa-solid fa-gavel"></i></div>
                     <div class="gov-info">
-                        <h3>Présidence Fondatrice</h3>
-                        <p>Direction stratégique, politique, diplomatique et impulsion mondiale de l'organisation.</p>
+                        <h3>Le Conseil d'Administration</h3>
+                        <p>Définit les orientations stratégiques mondiales et veille à la parfaite application de nos principes éthiques.</p>
                     </div>
                 </div>
                 <div class="gov-card">
-                    <div class="gov-icon"><i class="fa-solid fa-folder-open"></i></div>
+                    <div class="gov-icon"><i class="fa-solid fa-users-gear"></i></div>
                     <div class="gov-info">
-                        <h3>Secrétariat Général</h3>
-                        <p>Coordination administrative globale, gestion institutionnelle et relations diplomatiques externes.</p>
-                    </div>
-                </div>
-                <div class="gov-card">
-                    <div class="gov-icon"><i class="fa-solid fa-graduation-cap"></i></div>
-                    <div class="gov-info">
-                        <h3>Comité Éducation</h3>
-                        <p>Développement de programmes d'accès aux connaissances et supports pédagogiques internationaux.</p>
-                    </div>
-                </div>
-                <div class="gov-card">
-                    <div class="gov-icon"><i class="fa-solid fa-people-arrows"></i></div>
-                    <div class="gov-info">
-                        <h3>Comité Culture et Dialogue</h3>
-                        <p>Promotion active du rapprochement interculturel, des arts et de la cohésion sociale.</p>
-                    </div>
-                </div>
-                <div class="gov-card">
-                    <div class="gov-icon"><i class="fa-solid fa-seedling"></i></div>
-                    <div class="gov-info">
-                        <h3>Comité Innovation et Avenir</h3>
-                        <p>Recherche stratégique, prospective technologique et déploiement d'initiatives durables.</p>
-                    </div>
-                </div>
-                <div class="gov-card">
-                    <div class="gov-icon"><i class="fa-solid fa-link"></i></div>
-                    <div class="gov-info">
-                        <h3>Comité Partenariats</h3>
-                        <p>Identification et structuration des coopérations de haut niveau sur les cinq continents.</p>
+                        <h3>Le Secrétariat Exécutif</h3>
+                        <p>Assure la coordination opérationnelle quotidienne, le suivi des projets de terrain et la gestion des représentations locales.</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- PAGE PUBLICATIONS -->
-    <section id="publications">
+    <section id="contact">
         <div class="container">
             <div class="section-header">
-                <h2>Bibliothèque Officielle</h2>
-                <p>Consultez et téléchargez les documents de référence et analyses stratégiques édités par la CFI.</p>
-            </div>
-            <div class="pub-grid">
-                <div class="pub-card">
-                    <i class="fa-solid fa-file-pdf"></i>
-                    <h3>Manifeste Officiel de la CFI</h3>
-                    <p style="font-size:0.85rem; color:#718096; margin-bottom:15px;">Document Cadre Institutionnel</p>
-                    <a href="#" class="pub-btn" onclick="alert('Téléchargement du document PDF demandé au Secrétariat.')"><i class="fa-solid fa-download"></i> Télécharger le PDF</a>
-                </div>
-                <div class="pub-card">
-                    <i class="fa-solid fa-file-pdf"></i>
-                    <h3>Les 10 Contributions Historiques</h3>
-                    <p style="font-size:0.85rem; color:#718096; margin-bottom:15px;">Doctrine Fondamentale</p>
-                    <a href="#" class="pub-btn" onclick="alert('Téléchargement du document PDF demandé au Secrétariat.')"><i class="fa-solid fa-download"></i> Télécharger le PDF</a>
-                </div>
-                <div class="pub-card">
-                    <i class="fa-solid fa-file-pdf"></i>
-                    <h3>Charte de la Dignité Humaine</h3>
-                    <p style="font-size:0.85rem; color:#718096; margin-bottom:15px;">Engagement Éthique Global</p>
-                    <a href="#" class="pub-btn" onclick="alert('Téléchargement du document PDF demandé au Secrétariat.')"><i class="fa-solid fa-download"></i> Télécharger le PDF</a>
-                </div>
-                <div class="pub-card">
-                    <i class="fa-solid fa-file-pdf"></i>
-                    <h3>Guide de l'Éveil des Consciences</h3>
-                    <p style="font-size:0.85rem; color:#718096; margin-bottom:15px;">Manuel Pratique Citoyen</p>
-                    <a href="#" class="pub-btn" onclick="alert('Téléchargement du document PDF demandé au Secrétariat.')"><i class="fa-solid fa-download"></i> Télécharger le PDF</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- PAGE PARTENAIRES -->
-    <section id="partenaires" style="background-color: var(--light-bg);">
-        <div class="container">
-            <div class="section-header">
-                <h2>Nos Partenaires de Coopération</h2>
-                <p>La CFI tisse des relations d'impact avec des institutions mondiales majeures.</p>
-            </div>
-            <div class="partenaires-layout">
-                <div class="partenaires-list">
-                    <div class="partenaire-item"><i class="fa-solid fa-building-columns"></i> Universités</div>
-                    <div class="partenaire-item"><i class="fa-solid fa-microscope"></i> Centres de recherche</div>
-                    <div class="partenaire-item"><i class="fa-solid fa-school"></i> Établissements éducatifs</div>
-                    <div class="partenaire-item"><i class="fa-solid fa-users-gear"></i> Associations</div>
-                    <div class="partenaire-item"><i class="fa-solid fa-globe"></i> Organisations int.</div>
-                    <div class="partenaire-item"><i class="fa-solid fa-landmark"></i> Institutions publiques</div>
-                    <div class="partenaire-item"><i class="fa-solid fa-map-location-dot"></i> Collectivités territoriales</div>
-                    <div class="partenaire-item"><i class="fa-solid fa-briefcase"></i> Entreprises engagées</div>
-                </div>
-                <div class="partenaire-obj">
-                    <h3>Objectif Stratégique</h3>
-                    <p>Créer un maillage et un réseau d'influence mondial de coopération bilatérale au service exclusif du progrès humain et éthique.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- SECTION PRÉSENCE INTERNATIONALE -->
-    <section id="presence">
-        <div class="container">
-            <div class="section-header">
-                <h2>Présence Internationale</h2>
-                <p>La CFI poursuit activement le développement progressif de son réseau institutionnel à travers le monde.</p>
+                <h2>Rejoindre l'Initiative</h2>
+                <p>Devenez acteur du changement. Envoyez-nous vos demandes d'adhésion ou questions via ce formulaire officiel.</p>
             </div>
             
-            <!-- Carte du Monde Interactive Stylisée -->
-            <div class="map-container" style="text-align: center; background: white; padding: 30px; border: 1px solid rgba(0,0,0,0.05);">
-                <i class="fa-solid fa-earth-americas" style="font-size: 8rem; color: var(--primary-blue); opacity: 0.85; margin-bottom: 20px; display: block;"></i>
-                <p style="font-weight: 500; color: var(--body-text); max-width: 650px; margin: 0 auto;">Réseau diplomatique global en cours de cartographie numérique.</p>
-                
-                <div class="regions-tags">
-                    <span class="region-tag">Afrique</span>
-                    <span class="region-tag">Europe</span>
-                    <span class="region-tag">Amériques</span>
-                    <span class="region-tag">Asie</span>
-                    <span class="region-tag">Moyen-Orient</span>
-                    <span class="region-tag">Océanie</span>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- NOUVELLE SECTION GALERIE PREMIUM (12 IMAGES) -->
-    <section id="galerie" style="background-color: var(--light-bg);">
-        <div class="container">
-            <div class="section-header">
-                <h2>La CFI en Images</h2>
-                <p>Aperçu thématique de nos axes d'intervention civiques, diplomatiques et communautaires globaux.</p>
-            </div>
-            <div class="gallery-grid">
-                <div class="gallery-item">
-                    <img src="photo1.png" alt="Diplomates en réunion">
-                    <div class="gallery-overlay"><h4>Diplomates en réunion</h4></div>
-                </div>
-                <div class="gallery-item">
-                    <img src="photo2.png" alt="Conférence internationale">
-                    <div class="gallery-overlay"><h4>Conférence internationale</h4></div>
-                </div>
-                <div class="gallery-item">
-                    <img src="photo3.png" alt="Éducation des enfants">
-                    <div class="gallery-overlay"><h4>Éducation des enfants</h4></div>
-                </div>
-                <div class="gallery-item">
-                    <img src="photo1.png" alt="Enseignement supérieur">
-                    <div class="gallery-overlay"><h4>Enseignement supérieur</h4></div>
-                </div>
-                <div class="gallery-item">
-                    <img src="photo2.png" alt="Agriculture moderne">
-                    <div class="gallery-overlay"><h4>Agriculture moderne</h4></div>
-                </div>
-                <div class="gallery-item">
-                    <img src="photo3.png" alt="Innovation technologique">
-                    <div class="gallery-overlay"><h4>Innovation technologique</h4></div>
-                </div>
-                <div class="gallery-item">
-                    <img src="photo1.png" alt="Développement durable">
-                    <div class="gallery-overlay"><h4>Développement durable</h4></div>
-                </div>
-                <div class="gallery-item">
-                    <img src="photo2.png" alt="Dialogue interculturel">
-                    <div class="gallery-overlay"><h4>Dialogue interculturel</h4></div>
-                </div>
-                <div class="gallery-item">
-                    <img src="photo3.png" alt="Jeunes leaders">
-                    <div class="gallery-overlay"><h4>Jeunes leaders</h4></div>
-                </div>
-                <div class="gallery-item">
-                    <img src="photo1.png" alt="Coopération internationale">
-                    <div class="gallery-overlay"><h4>Coopération internationale</h4></div>
-                </div>
-                <div class="gallery-item">
-                    <img src="photo2.png" alt="Actions communautaires">
-                    <div class="gallery-overlay"><h4>Actions communautaires</h4></div>
-                </div>
-                <div class="gallery-item">
-                    <img src="photo3.png" alt="Vision mondiale">
-                    <div class="gallery-overlay"><h4>Vision mondiale</h4></div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- PAGE ADHÉSION (FORMULAIRE PREMIUM) -->
-    <section id="adhesion">
-        <div class="container">
-            <div class="section-header">
-                <h2>Devenir Membre de l'Initiative</h2>
-                <p>Rejoignez un réseau de citoyens engagés pour porter la voix d'un avenir partagé.</p>
-            </div>
-            
-            <div class="form-premium-box">
-                <div id="adhesion-alert" class="alert-success">Merci pour votre intérêt envers la CFI. Votre demande sera examinée par notre secrétariat.</div>
-                
-                <form id="form-candidature" onsubmit="event.preventDefault(); document.getElementById('adhesion-alert').style.display='block'; this.reset();">
-                    <div class="form-row">
-                        <div class="form-group">
-                            <label>Nom complet :</label>
-                            <input type="text" required placeholder="Ex: Dr. Jean-Pierre Ouedraogo">
-                        </div>
-                        <div class="form-group">
-                            <label>Pays de résidence :</label>
-                            <input type="text" required placeholder="Ex: Burkina Faso">
-                        </div>
-                    </div>
-                    <div class="form-row">
-                        <div class="form-group">
-                            <label>Profession / Fonction :</label>
-                            <input type="text" required placeholder="Ex: Enseignant-Chercheur">
-                        </div>
-                        <div class="form-group">
-                            <label>Adresse Électronique (Email) :</label>
-                            <input type="email" required placeholder="nom@domaine.org">
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label>Numéro de Téléphone (avec indicatif) :</label>
-                        <input type="tel" required placeholder="Ex: +226 XX XX XX XX">
-                    </div>
-                    <div class="form-group">
-                        <label>Vos motivations à nous rejoindre :</label>
-                        <textarea rows="5" required placeholder="Veuillez décrire brièvement vos motivations éthiques et professionnelles..."></textarea>
-                    </div>
-                    <button type="submit" class="btn" style="width: auto; padding:15px 35px;">Soumettre ma candidature</button>
-                </form>
-            </div>
-        </div>
-    </section>
-
-    <!-- SECTION REJOINDRE / CONTACT ET ADRESSES -->
-    <section id="contact" style="background-color: var(--light-bg);">
-        <div class="container">
-            <div class="section-header">
-                <h2>Contacter le Secrétariat Global</h2>
-                <p>Pour toute correspondance officielle, demande de partenariat diplomatique ou questions générales.</p>
-            </div>
-
             <div class="contact-layout">
                 <div class="visuals-sidebar">
-                    <div class="official-logo-box">
-                        <img src="CFI.png" alt="Logo Officiel CFI" class="official-logo-img">
-                    </div>
-                    <p class="motto-text">Éveiller les Consciences • Unir les Peuples • Bâtir l'Avenir</p>
+                    <img src="CFI.png" alt="CFI Institutionnel" class="sidebar-logo">
+                    <h3>CFI GLOBAL</h3>
+                    <p class="motto-text">Conscience • Unité • Avenir</p>
                     <div class="info-card">
-                        <h4>Secrétariat International</h4>
-                        <p><i class="fa-solid fa-location-dot" style="color:var(--accent-gold); margin-right:5px;"></i> Ouagadougou – Burkina Faso</p>
-                        <p>Délai de traitement : 48h ouvrées.</p>
-                        <a href="mailto:cfiglobal.office@gmail.com" class="email-link">cfiglobal.office@gmail.com</a>
+                        <h4>Secrétariat Général</h4>
+                        <p>Pour toute question relative aux partenariats internationaux ou adhésion institutionnelle :</p>
+                        <a href="mailto:contact@cfiglobaloffice.org" class="email-link">contact@cfiglobaloffice.org</a>
                     </div>
                 </div>
 
-                <div class="form-container">
-                    <form action="mailto:cfiglobal.office@gmail.com" method="POST" enctype="text/plain">
+                <div class="form-premium-box">
+                    <form action="#" method="POST">
                         <div class="form-group">
                             <label>Nom complet ou Institution Officielle :</label>
-                            <input type="text" name="Nom_Institution" required placeholder="Ex: S.E. Ambassadeur / Organisation / Votre Nom">
+                            <input type="text" placeholder="Ex: S.E. Ambassadeur Jean Dupont" required>
                         </div>
                         <div class="form-group">
                             <label>Adresse Électronique de Contact :</label>
-                            <input type="email" name="Email_Contact" required placeholder="adresse@domaine.org">
+                            <input type="email" placeholder="adresse@domaine.com" required>
                         </div>
                         <div class="form-group">
                             <label>Objet de votre démarche :</label>
-                            <select name="Objet_Demarche" required>
-                                <option value="" disabled selected>Sélectionnez l'objet principal</option>
-                                <option value="Partenariat">Partenariat Diplomatique & Institutionnel</option>
-                                <option value="Adhesion">Demande d'Adhésion / Nous Rejoindre</option>
-                                <option value="Projets">Soutien aux Projets & Initiatives</option>
-                                <option value="Information">Demande d'Information Générale</option>
+                            <select required>
+                                <option value="" disabled selected>Sélectionnez une option...</option>
+                                <option value="adhesion">Demande d'Adhésion Citoyenne</option>
+                                <option value="partenariat">Proposition de Partenariat Stratégique</option>
+                                <option value="information">Demande d'Information Générale</option>
                             </select>
                         </div>
                         <div class="form-group">
-                            <label>Contenu de votre message officiel :</label>
-                            <textarea name="Message_Officiel" rows="6" required placeholder="Veuillez formuler votre demande officielle avec précision..."></textarea>
+                            <label>Contenu de votre message :</label>
+                            <textarea rows="5" placeholder="Rédigez votre texte ici de manière détaillée..." required></textarea>
                         </div>
-                        <button type="submit" class="btn">Soumettre au Secrétariat</button>
+                        <button type="submit" class="submit-btn">Transmettre au Bureau Exécutif</button>
                     </form>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- SECTION SOUTIEN (DON) -->
-    <section class="soutien-section" id="soutien">
-        <div class="container soutien-box">
-            <h2 style="color: var(--primary-blue); font-family: var(--font-title); font-size: 2.3rem; margin-bottom: 15px;">Soutenir la CFI</h2>
-            <p style="color: #4a5568; font-size: 1.1rem; line-height: 1.8;">
-                Votre contribution financière ou institutionnelle nous permet de développer activement nos actions d'envergure internationale, de financer nos programmes éducatifs gratuits et de promouvoir nos initiatives structurantes en faveur de l'éveil des consciences et de l'unité des peuples.
-            </p>
-            <a href="#" class="soutien-btn" onclick="alert('Module de paiement en cours de configuration institutionnelle.')">Contribuer à l'Avenir</a>
-        </div>
-    </section>
-
-    <!-- SECTION NEWSLETTER -->
-    <section class="newsletter-section">
-        <div class="newsletter-box">
-            <h3>Recevez nos publications officielles</h3>
-            <p>Inscrivez-vous afin de recevoir périodiquement les dernières actualités, analyses et publications stratégiques de la CFI.</p>
-            <form class="newsletter-form" onsubmit="event.preventDefault(); alert('Inscription enregistrée à la newsletter officielle de la CFI.'); this.reset();">
-                <input type="email" required placeholder="Votre adresse email professionnelle...">
-                <button type="submit" class="newsletter-btn">S'abonner</button>
-            </form>
-        </div>
-    </section>
-
-    <!-- PIED DE PAGE PREMIUM ET RÉSEAUX SOCIAUX -->
     <footer>
-        <div class="footer-grid">
-            <div class="footer-brand">
-                <h3 style="color: white; font-family: var(--font-title);">CFI</h3>
-                <p style="color: var(--accent-gold); font-weight:600;">CONSCIENCE & FUTURE INITIATIVE</p>
-                <p>« Éveiller les consciences • Unir les peuples • Construire l'avenir »</p>
-                
-                <!-- Icônes des Réseaux Sociaux Réclamées -->
-                <div class="social-icons">
-                    <a href="#" title="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
-                    <a href="#" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
-                    <a href="#" title="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
-                    <a href="#" title="YouTube"><i class="fa-brands fa-youtube"></i></a>
-                    <a href="#" title="X (Twitter)"><i class="fa-brands fa-x-twitter"></i></a>
-                </div>
-            </div>
-            
-            <div class="footer-links">
-                <h4>Liens Rapides</h4>
-                <ul>
-                    <li><a href="#accueil">Accueil</a></li>
-                    <li><a href="#apropos">À Propos</a></li>
-                    <li><a href="#manifeste">Manifeste</a></li>
-                    <li><a href="#vision">Vision</a></li>
-                    <li><a href="#contributions">10 Points</a></li>
-                    <li><a href="#gouvernance">Gouvernance</a></li>
-                    <li><a href="#publications">Librairie</a></li>
-                    <li><a href="#adhesion">Adhésion</a></li>
-                </ul>
-            </div>
-            
-            <div class="footer-docs">
-                <h4>Documents Officiels & Mentions</h4>
-                <ul>
-                    <li><a href="#" onclick="alert('Affichage de la Politique de confidentialité en cours de rédaction.')">Politique de confidentialité</a></li>
-                    <li><a href="#" onclick="alert('Affichage des Conditions d\'utilisation en cours de rédaction.')">Conditions d'utilisation</a></li>
-                    <li><a href="#" onclick="alert('Affichage des Mentions légales en cours de rédaction.')">Mentions légales</a></li>
-                </ul>
-            </div>
-        </div>
-        
-        <div class="footer-bottom">
-            <p>&copy; 2026 Conscience & Future Initiative (CFI). Tous droits réservés.</p>
-            <p style="margin-top: 8px; font-size: 0.75rem; letter-spacing: 0.5px; opacity: 0.6;">Usage Institutionnel • Éducatif • Diplomatique Strict</p>
-        </div>
+        <p>&copy; 2026 Conscience & Future Initiative (CFI). Tous droits réservés.</p>
+        <div class="footer-bottom">Organisation Internationale pour l'Éveil des Consciences et la Coopération des Peuples.</div>
     </footer>
-    
+
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({
+                pageLanguage: 'fr',
+                layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
+                autoDisplay: false
+            }, 'google_translate_element');
+        }
+    </script>
+    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
 </body>
 </html>
